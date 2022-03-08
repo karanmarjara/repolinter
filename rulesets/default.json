@@ -17,6 +17,26 @@
         }
       }
     },
+    "docker-file-exists": {
+      "level": "error",
+      "rule": {
+        "type": "file-existence",
+        "options": {
+          "globsAny": ["DOCKERFILE*"],
+          "nocase": true
+        }
+      }
+    },
+    "image-file-exists": {
+      "level": "error",
+      "rule": {
+        "type": "file-existence",
+        "options": {
+          "globsAny": ["**/*.jpg","**/*.gif"],
+          "nocase": true
+        }
+      }
+    },
     "readme-file-exists": {
       "level": "error",
       "rule": {
@@ -91,6 +111,15 @@
         }
       }
     },
+    "images-present": {
+      "level": "error",
+      "rule": {
+        "type": "file-type-images",
+        "options": {
+          "type": ["**/*.svg", "**/*.jpg", "**/*.jpeg","**/*.sco"]
+        }
+      }
+    },
     "binaries-not-present": {
       "level": "error",
       "rule": {
@@ -157,6 +186,19 @@
           "globsAll": ["**/*.js", "!node_modules/**"],
           "lineCount": 5,
           "patterns": ["Copyright", "License"],
+          "flags": "i"
+        }
+      }
+    },
+    "docker-wget-exist": {
+      "level": "warning",
+      "rule": {
+        "type": "file-starts-with",
+        "options": {
+          "globsAll": ["Dockerfile*"],
+          "nocase": true,
+          "lineCount": 20,
+          "patterns": ["Wget"],
           "flags": "i"
         }
       }
