@@ -111,12 +111,13 @@
         }
       }
     },
-    "images-present": {
+    "image-file-exists": {
       "level": "error",
       "rule": {
-        "type": "file-type-images",
+        "type": "file-existence",
         "options": {
-          "type": ["**/*.svg", "**/*.jpg", "**/*.jpeg","**/*.sco"]
+          "globsAny": ["**/*.svg", "**/*.jpg", "**/*.jpeg","**/*.sco"],
+          "nocase": true
         }
       }
     },
@@ -201,7 +202,9 @@
           "patterns": ["Wget"],
           "flags": "i"
         }
-      }
+      },
+      "policyInfo": "Gotta keep that readme up to date",
+      "policyUrl": "www.example.com/mycompany"
     },
     "github-issue-template-exists": {
       "level": "error",
