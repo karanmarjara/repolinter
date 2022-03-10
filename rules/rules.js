@@ -12,6 +12,7 @@ module.exports = [
   'file-not-contents',
   'file-not-exists',
   'file-starts-with',
+  'file-type-images',
   'file-type-exclusion',
   'git-grep-commits',
   'git-grep-log',

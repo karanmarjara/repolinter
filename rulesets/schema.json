@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+  "$id": "https://github.com/karanmarjara/repolinter/blob/2ed2a15261e6245b9e6716e673e4d344527c5d03/rulesets/schema.json#",
   "type": "object",
   "title": "RepoLinter JSON Configuration Schema",
   "required": ["rules", "axioms"],
